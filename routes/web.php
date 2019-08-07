@@ -15,12 +15,25 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/mapview', function () {
+    return view('mapview');
+});
+
 Route::match(['GET','POST'],'/vehiclesearch','VehicleSearchController@search')->name('vehiclesearch');
 
-Route::match(['GET','POST'],'/postvehicle','VehiclePostController@index')->name('vehiclepost');
+Route::get('/postvehicle',function(){
+    return view('vehiclepost',['messages'=>[]]);
+})->name('vehiclepost');
+
+Route::post('/postvehicle','VehiclePostController@postmyvehicle');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/khaltitest', 'KhaltiController@index')->name('khaltitest');
+
+Route::get('/individualpost/{id?}', 'PostController@showprofile')->name('individualpostroute');
+
+
+

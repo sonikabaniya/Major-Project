@@ -24,10 +24,12 @@
                                 <input type="date" class="form-control" name="dropoffdate" placeholder="Drop Off Date">
                             </div>
                             </div>
-                            <div class="form-group">
+
+                            <div class="form-group ">
                             <label for="city">City</label>
                             <input type="text" class="form-control" name="city" placeholder="City">
                             </div>
+                            
                             <div class="form-group">
                             <label for="vehicletype">Vehicle Type</label>
                             <input type="text" class="form-control" name="vehicletype" placeholder="Vehicle">
@@ -48,18 +50,19 @@
                         <tr>
                         <th scope="col">Vehicle</th>
                         <th scope="col">Vehicle descripton</th>
-                        <th scope="col">Image</th>
+                        <th scope="col">Price</th>
                         <th scope="col">Location</th>
+                        <th scope="col">View Details</th>
                         </tr>
                     </thead>
                     <tbody>
 
                     <tr>
-                        {{-- <td><a href="{{ route('individualvocabroute',['id' => $querymatch->vocabulary->id]) }}">{{ $querymatch->vocabulary->vocab }}</a></td> --}}
                         <td>{{ $querymatch->VehicleType }}</td>
                         <td>{{ $querymatch->desc }}</td>
-                        <td>{{ $querymatch->Image }}</td>
+                        <td>{{ $querymatch->Price }}</td>
                         <td>{{ $querymatch->Location}}</td>
+                        <td><a href="{{ route('individualpostroute',['id' =>$querymatch->productid]) }}">View Details</a></td>
                     </tr>
                 @endforeach
 

@@ -114,7 +114,7 @@ section .section-title {
 }
 
 /* For Map showing */
-#mapBox {
+/* #mapBox {
   height: 100%;
 }
 #mapDiv {
@@ -122,5 +122,5 @@ section .section-title {
   width: 80%;
   margin: 50px;
   padding: 2%;
-}
+} */
 

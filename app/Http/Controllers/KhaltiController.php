@@ -17,7 +17,7 @@ class KhaltiController extends Controller
             $response = $this->fakePayment($token, $amount);
             $idx = $response['response']['state']['name'];
             if($response['statusCode'] == 200){
-                return 'bhayo';
+            return view('successpayment');
             }
             // if response bhayo bhane
             //redirect to success page
