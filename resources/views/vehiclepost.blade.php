@@ -48,15 +48,22 @@
                                 </div>
                             <div class="form-group">
                             <label for="vehicletype">Vehicle Type</label>
-                            <input type="text" class="form-control" name="vehicletype" placeholder="Vehicle">
+                            <select class="custom-select" id="inputGroupSelect01" name="vehicletype">
+                                    <option selected>Choose...</option>
+                                    <option value="Car">Car</option>
+                                    <option value="Scooter">Scooter</option>
+                                    <option value="Bike">Bike</option>
+                                    <option value="Cycle">Cycle</option>
+                                  </select>
                             </div>
 
                             <div class="form-group col-md-6">
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" class="custom-control-input" id="defaultInline1" name="location" value="28;84">
+                                        <input type="radio" class="custom-control-input" id="locbutton" name="location">
                                         <label class="custom-control-label" for="defaultInline1">Allow my location</label>
                                       </div>
                             </div>
+                            
                             
                             @csrf
                             <button type="submit" class="btn btn-primary">Post My Vehicle</button>
@@ -66,5 +73,27 @@
             </div>
         </div>
     </div>
+
+    <script>
+      
+        $(document).ready(function(){
+        $('#locbutton').click(function(){
+            var lat =   navigator.geolocation.getCurrentPosition(function(location) {
+                    console.log(location.coords.latitude);
+                    console.log(location.coords.longitude);
+                    console.log(location.coords.accuracy);
+
+                    var ajax_call = function() {
+                            //your jQuery ajax code
+                        };
+
+                    var interval = 1000 * 60 * 0.05;
+                    setInterval(api_call, interval);
+                    });
+
+        });
+        });
+    </script>
+
 
 @endsection

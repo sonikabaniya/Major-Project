@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class KhaltiController extends Controller
 {
@@ -17,6 +18,9 @@ class KhaltiController extends Controller
             $response = $this->fakePayment($token, $amount);
             $idx = $response['response']['state']['name'];
             if($response['statusCode'] == 200){
+                DB::table('AvailableVehicle')
+                ->where('productid', $user->id)
+                ->update(['status' => 'booked']);
             return view('successpayment');
             }
             // if response bhayo bhane

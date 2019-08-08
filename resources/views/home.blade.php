@@ -62,26 +62,26 @@
     <div id="servicesDiv">
         <h3>Our Services</h3>
         <br>
-        <div class="imgcontainer">
-                <img src="{{ asset("img/cycle.png") }}" alt="Avatar" class="image" style="width:100%">
+        <div class="imgcontainer col-sm-6 col-md-6">
+                <img src="{{ asset("img/Cycle.png") }}" alt="Avatar" class="image" style="width:100%">
                 <div class="middle">
                   <div class="text">Cycle <br> Rs. 500 per day</div>
                 </div>
         </div>
-        <div class="imgcontainer">
-            <img src="{{ asset("img/bike.png") }}" alt="Avatar" class="image" style="width:100%">
+        <div class="imgcontainer col-sm-6 col-md-6">
+            <img src="{{ asset("img/Bike.png") }}" alt="Avatar" class="image" style="width:100%">
             <div class="middle">
               <div class="text">Motorbike<br> Rs. 5000 per day</div>
             </div>
         </div>
-        <div class="imgcontainer">
+        <div class="imgcontainer col-sm-6 col-md-6">
             <img src="{{ asset("img/scooter.png") }}" alt="Avatar" class="image" style="width:100%">
             <div class="middle">
               <div class="text">Scooter<br> Rs. 5000 per day</div>
             </div>
         </div>
-        <div class="imgcontainer">
-            <img src="{{ asset("img/car.png") }}" alt="Avatar" class="image" style="width:100%">
+        <div class="imgcontainer col-sm-6 col-md-6">
+            <img src="{{ asset("img/Car.png") }}" alt="Avatar" class="image" style="width:100%">
             <div class="middle">
               <div class="text">Car<br> Rs. 7000 per day</div>
             </div>

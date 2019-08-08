@@ -44,17 +44,17 @@
             
             <br><br><br>
             @if($querymatchs)
-                @foreach($querymatchs as $querymatch)
-                <table  class="table table-hover table-bordered" id="vehicletable" >
-                    <thead>
-                        <tr>
+            <table  class="table table-hover table-bordered" id="vehicletable" >
+                <thead>
+                    <tr>
                         <th scope="col">Vehicle</th>
                         <th scope="col">Vehicle descripton</th>
-                        <th scope="col">Price</th>
+                        <th scope="col">Price per day</th>
                         <th scope="col">Location</th>
                         <th scope="col">View Details</th>
-                        </tr>
-                    </thead>
+                    </tr>
+                </thead>
+                @foreach($querymatchs as $querymatch)
                     <tbody>
 
                     <tr>
